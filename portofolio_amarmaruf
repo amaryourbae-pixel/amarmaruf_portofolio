@@ -1,0 +1,1122 @@
+```html
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amar Ma'ruf | Creative Portfolio & Visual Designer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#f0f4f9',
+                            100: '#d9e2ec',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#080d1a',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#d4af37',
+                            600: '#b8860b',
+                            700: '#996515',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 50%, #e6ca65 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-100 selection:text-amber-900">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-navy-900 flex items-center justify-center text-amber-400 font-bold text-xl shadow-md border border-amber-400/30 group-hover:scale-105 transition-transform">
+                        AM
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-lg text-navy-900 tracking-tight leading-none group-hover:text-amber-600 transition-colors">Amar Ma'ruf</span>
+                        <span class="text-xs text-amber-600 font-semibold tracking-wider uppercase mt-1">Visual Designer</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                    <a href="#about" class="hover:text-amber-600 transition-colors">Tentang Saya</a>
+                    <a href="#experience" class="hover:text-amber-600 transition-colors">Pengalaman</a>
+                    <a href="#projects" class="hover:text-amber-600 transition-colors">Karya & Portofolio</a>
+                    <a href="#certifications" class="hover:text-amber-600 transition-colors">Sertifikasi</a>
+                    <a href="#skills" class="hover:text-amber-600 transition-colors">Keahlian</a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-full bg-navy-900 text-amber-400 border border-amber-400/40 hover:bg-slate-800 hover:shadow-lg transition-all duration-200">
+                        <i class="fa-solid fa-paper-plane mr-2 text-xs"></i>Kontak
+                    </a>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-navy-900 hover:bg-slate-100 focus:outline-none" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-amber-50 hover:text-amber-600">Tentang Saya</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-amber-50 hover:text-amber-600">Pengalaman</a>
+            <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-amber-50 hover:text-amber-600">Karya & Portofolio</a>
+            <a href="#certifications" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-amber-50 hover:text-amber-600">Sertifikasi</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-amber-50 hover:text-amber-600">Keahlian</a>
+            <a href="#contact" class="block w-full text-center px-4 py-2.5 rounded-xl bg-navy-900 text-amber-400 font-semibold shadow">Hubungi Saya</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-gradient-to-b from-white via-slate-50 to-slate-100">
+        <!-- Subtle decorative background elements -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-amber-100/50 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -left-24 w-80 h-80 bg-slate-200/50 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold uppercase tracking-widest shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                        Creative Portfolio 2026
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-tight">
+                        Visualizing Ideas Into <span class="gold-gradient-text block mt-1">Graphic Design</span> & Media Art
+                    </h1>
+
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                        Halo! Saya <strong class="text-navy-900 font-semibold">Amar Ma'ruf</strong>, lulusan Sarjana Farmasi dari Universitas Negeri Gorontalo dengan ketertarikan tinggi pada komunikasi visual, desain grafis, dan manajemen media kreatif.
+                    </p>
+
+                    <!-- Hero Call to Actions -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#projects" class="px-8 py-4 rounded-xl gold-gradient-bg text-navy-950 font-bold hover:shadow-xl hover:shadow-amber-500/20 hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-3">
+                            <i class="fa-solid fa-palette text-navy-950"></i>
+                            Eksplorasi Karya
+                        </a>
+                        <button onclick="toggleCvModal()" class="px-8 py-4 rounded-xl bg-white border-2 border-navy-900 text-navy-900 font-bold hover:bg-navy-900 hover:text-white hover:shadow-lg transition-all duration-200 flex items-center gap-3">
+                            <i class="fa-solid fa-qrcode text-amber-600"></i>
+                            Lihat / Scan CV
+                        </button>
+                    </div>
+
+                    <!-- Quick Stats Pill -->
+                    <div class="pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 text-center">
+                        <div class="p-3 bg-white/80 rounded-xl border border-slate-200 shadow-sm">
+                            <p class="text-2xl font-extrabold text-navy-900">3.25</p>
+                            <p class="text-xs font-medium text-slate-500 mt-0.5">IPK Sarjana Farmasi</p>
+                        </div>
+                        <div class="p-3 bg-white/80 rounded-xl border border-slate-200 shadow-sm">
+                            <p class="text-2xl font-extrabold text-amber-600">5+</p>
+                            <p class="text-xs font-medium text-slate-500 mt-0.5">Kategori Karya Desain</p>
+                        </div>
+                        <div class="p-3 bg-white/80 rounded-xl border border-slate-200 shadow-sm">
+                            <p class="text-2xl font-extrabold text-navy-900">4+</p>
+                            <p class="text-xs font-medium text-slate-500 mt-0.5">Organisasi & Event</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Visual / Interactive Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <!-- Decorative Frame -->
+                        <div class="absolute -inset-1.5 rounded-3xl bg-gradient-to-r from-amber-400 via-amber-600 to-navy-900 opacity-70 blur-md"></div>
+                        
+                        <div class="relative bg-navy-900 rounded-3xl p-6 shadow-2xl text-white border border-amber-400/20 overflow-hidden">
+                            <!-- Background Pattern -->
+                            <div class="absolute right-0 top-0 opacity-10 pointer-events-none">
+                                <i class="fa-solid fa-bezier-curve text-9xl text-amber-400"></i>
+                            </div>
+
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-16 h-16 rounded-2xl bg-amber-500 text-navy-900 flex items-center justify-center font-black text-2xl shadow-lg">
+                                    AM
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Amar Ma'ruf, S.Farm</h3>
+                                    <p class="text-xs text-amber-400 font-medium">Graphic & Visual Designer Pro</p>
+                                    <p class="text-xs text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-amber-400 mr-1"></i>Gorontalo, Indonesia</p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3 bg-slate-800/80 p-4 rounded-2xl border border-slate-700/60 mb-6">
+                                <div class="flex justify-between items-center text-xs">
+                                    <span class="text-slate-400">Spesialisasi</span>
+                                    <span class="text-amber-300 font-semibold">Social Media & Event Assets</span>
+                                </div>
+                                <div class="flex justify-between items-center text-xs">
+                                    <span class="text-slate-400">Pendidikan</span>
+                                    <span class="text-white font-medium">Universitas Negeri Gorontalo</span>
+                                </div>
+                                <div class="flex justify-between items-center text-xs">
+                                    <span class="text-slate-400">Status</span>
+                                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-400">
+                                        Open for Collaboration
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Interactive Quick Actions -->
+                            <div class="grid grid-cols-2 gap-3">
+                                <a href="https://wa.me/6282191223271" target="_blank" class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs transition-colors shadow">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+                                </a>
+                                <a href="mailto:amarshopper44@gmail.com" class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-medium text-xs transition-colors">
+                                    <i class="fa-regular fa-envelope text-sm"></i> Email Direct
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-2">Profil Singkat</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">Tentang Saya</p>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Bio Description -->
+                <div class="lg:col-span-7 space-y-6">
+                    <h3 class="text-2xl font-bold text-navy-900 leading-snug">
+                        Memadukan Presisi Akademik Kefarmasian dengan Kreativitas Seni Visual
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Saya adalah lulusan Sarjana Farmasi dari <strong class="text-navy-900">Universitas Negeri Gorontalo</strong> yang memiliki ketertarikan besar pada dunia kreatif dan desain visual. Di luar latar belakang akademik saya, saya terus mengembangkan kreativitas melalui desain grafis, pengelolaan media sosial, serta pembuatan berbagai karya visual.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Portofolio ini merupakan kumpulan karya serta perjalanan saya dalam mengeksplorasi ide dan mengubahnya menjadi bentuk visual yang menarik, informatif, dan bermakna bagi audiens.
+                    </p>
+
+                    <!-- Key Strengths Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex gap-4 items-start">
+                            <div class="p-3 rounded-xl bg-navy-900 text-amber-400 shrink-0">
+                                <i class="fa-solid fa-lightbulb text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900">Konseptual & Kreatif</h4>
+                                <p class="text-xs text-slate-500 mt-1">Mampu menyusun ide cerita dan visual yang selaras dengan pesan utama event/brand.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex gap-4 items-start">
+                            <div class="p-3 rounded-xl bg-amber-500 text-navy-900 shrink-0">
+                                <i class="fa-solid fa-list-check text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900">Teliti & Terorganisir</h4>
+                                <p class="text-xs text-slate-500 mt-1">Pengalaman di dunia kefarmasian melatih kedisiplinan dan perhatian pada detail kecil.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education & Academic Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-slate-900 rounded-3xl p-8 text-white shadow-xl relative overflow-hidden border border-amber-500/30">
+                        <div class="absolute -right-8 -bottom-8 w-40 h-40 bg-amber-500/10 rounded-full blur-2xl"></div>
+                        
+                        <div class="flex items-center gap-3 mb-6">
+                            <i class="fa-solid fa-graduation-cap text-3xl text-amber-400"></i>
+                            <div>
+                                <h3 class="text-lg font-bold">Pendidikan Resmi</h3>
+                                <p class="text-xs text-slate-400">Riwayat Studi Akademik</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 rounded-2xl bg-slate-800/90 border border-slate-700 space-y-3">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-amber-300 text-base">Universitas Negeri Gorontalo</h4>
+                                    <p class="text-sm font-medium text-slate-200">S1 Jurusan Farmasi</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/30">
+                                    2021 - 2025
+                                </span>
+                            </div>
+                            <div class="pt-2 border-t border-slate-700/80 flex items-center justify-between text-xs text-slate-300">
+                                <span>Indeks Prestasi Kumulatif (IPK):</span>
+                                <span class="text-base font-extrabold text-amber-400">3,25</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-6 border-t border-slate-800 flex items-center justify-between">
+                            <div class="text-xs text-slate-400">
+                                Curriculum Vitae Lengkap
+                            </div>
+                            <button onclick="toggleCvModal()" class="text-xs text-amber-400 font-bold hover:text-amber-300 flex items-center gap-1 group">
+                                QR / Preview CV <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Organizations Section -->
+    <section id="experience" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-2">Jejak Langkah</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">Pengalaman Kerja & Organisasi</p>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Column 1: Organizational Experience (Creative & Tech Lead) -->
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="p-3 rounded-xl bg-navy-900 text-amber-400">
+                            <i class="fa-solid fa-users-gear text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-navy-900">Pengalaman Organisasi & Kepemimpinan</h3>
+                            <p class="text-xs text-slate-500">Peran aktif dalam divisi kreatif dan publikasi</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 relative border-l-2 border-amber-300 pl-6 ml-4">
+                        
+                        <!-- Timeline Item 1 -->
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-amber-500 border-4 border-slate-50 group-hover:scale-125 transition-transform"></div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                                <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                                    <h4 class="font-bold text-navy-900 text-base">Senat Mahasiswa FOK UNG</h4>
+                                    <span class="px-2.5 py-1 rounded-md bg-navy-900 text-amber-400 text-xs font-bold">2024</span>
+                                </div>
+                                <p class="text-sm font-semibold text-amber-600 mb-2">Ketua Bidang Informasi dan Komunikasi</p>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    Memimpin perencanaan konten publikasi, pengelolaan media sosial resmi, pembuatan video profil, serta publikasi kegiatan kemahasiswaan Fakultas Olahraga dan Kesehatan UNG.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 2 -->
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-navy-900 border-4 border-slate-50 group-hover:scale-125 transition-transform"></div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                                <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                                    <h4 class="font-bold text-navy-900 text-base">PPK Ormawa Himafa UNG</h4>
+                                    <span class="px-2.5 py-1 rounded-md bg-amber-100 text-amber-800 text-xs font-bold">2023</span>
+                                </div>
+                                <p class="text-sm font-semibold text-amber-600 mb-2">Ketua Divisi Kreatif</p>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    Bertanggung jawab penuh atas perancangan media visual program "Kampung Wisata Herbal" pendanaan nasional, termasuk spanduk, backdrop, baliho, serta peta potensi TOGA.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 3 -->
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-amber-500 border-4 border-slate-50 group-hover:scale-125 transition-transform"></div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                                <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                                    <h4 class="font-bold text-navy-900 text-base">SynergyFest 2023</h4>
+                                    <span class="px-2.5 py-1 rounded-md bg-amber-100 text-amber-800 text-xs font-bold">2023</span>
+                                </div>
+                                <p class="text-sm font-semibold text-amber-600 mb-2">Anggota Bidang Acara</p>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    Terlibat aktif dalam perancangan susunan acara, koordinasi teknis pelaksanaan event, serta penyusunan alur hiburan dan dokumentasi.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 4 -->
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-navy-900 border-4 border-slate-50 group-hover:scale-125 transition-transform"></div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                                <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                                    <h4 class="font-bold text-navy-900 text-base">Himpunan Mahasiswa Farmasi UNG</h4>
+                                    <span class="px-2.5 py-1 rounded-md bg-amber-100 text-amber-800 text-xs font-bold">2022 - 2023</span>
+                                </div>
+                                <p class="text-sm font-semibold text-amber-600 mb-2">Ketua Bidang Teknologi, Informasi, dan Komunikasi</p>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    Mengelola branding visual organisasi, pembuatan konten feed Instagram, serta produksi video profil official HIMAFA UNG.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Column 2: Professional Healthcare Work Experience -->
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="p-3 rounded-xl bg-amber-500 text-navy-900">
+                            <i class="fa-solid fa-briefcase text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-navy-900">Pengalaman Kerja Professional</h3>
+                            <p class="text-xs text-slate-500">Praktik Kefarmasian & Layanan Kesehatan</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        
+                        <!-- Work Card 1 -->
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-amber-400 transition-all">
+                            <div class="flex justify-between items-start mb-3">
+                                <div>
+                                    <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold uppercase tracking-wider">Tenaga Kefarmasian</span>
+                                    <h4 class="font-bold text-navy-900 text-lg mt-2">Rumah Sakit Toto Kabila</h4>
+                                    <p class="text-xs text-slate-500"><i class="fa-solid fa-location-dot mr-1"></i>Gorontalo</p>
+                                </div>
+                                <span class="text-xs font-bold text-navy-900 bg-slate-100 px-3 py-1 rounded-lg">Juni 2024</span>
+                            </div>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Melayani penyiapan resep obat, manajemen persediaan farmasi, serta memberikan edukasi penggunaan obat yang aman kepada pasien di lingkungan Rumah Sakit.
+                            </p>
+                        </div>
+
+                        <!-- Work Card 2 -->
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-amber-400 transition-all">
+                            <div class="flex justify-between items-start mb-3">
+                                <div>
+                                    <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold uppercase tracking-wider">Tenaga Kefarmasian</span>
+                                    <h4 class="font-bold text-navy-900 text-lg mt-2">Puskesmas Kota Utara</h4>
+                                    <p class="text-xs text-slate-500"><i class="fa-solid fa-location-dot mr-1"></i>Gorontalo</p>
+                                </div>
+                                <span class="text-xs font-bold text-navy-900 bg-slate-100 px-3 py-1 rounded-lg">Mei 2024</span>
+                            </div>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Bertanggung jawab pada pengandalian mutu obat, dispensing, serta pelayanan informasi obat (PIO) di fasilitas kesehatan tingkat pertama.
+                            </p>
+                        </div>
+
+                        <!-- Work Card 3 -->
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-amber-400 transition-all">
+                            <div class="flex justify-between items-start mb-3">
+                                <div>
+                                    <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold uppercase tracking-wider">Tenaga Kefarmasian</span>
+                                    <h4 class="font-bold text-navy-900 text-lg mt-2">Apotek Damhil UNG</h4>
+                                    <p class="text-xs text-slate-500"><i class="fa-solid fa-location-dot mr-1"></i>Gorontalo</p>
+                                </div>
+                                <span class="text-xs font-bold text-navy-900 bg-slate-100 px-3 py-1 rounded-lg">Mei 2024</span>
+                            </div>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Pengelolaan stok obat-obatan apotek, pelayanan konseling obat bebas maupun resep dokter, serta pencatatan administratif kefarmasian.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Projects Section (Portfolio Showcase Grid) -->
+    <section id="projects" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-2">Galeri Hasil Karya</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">Karya & Portfolio Desain</p>
+                <p class="text-slate-600 text-sm mt-3">Kumpulan proyek desain visual, identitas brand, materi cetak, hingga produksi video.</p>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12" id="filter-buttons">
+                <button onclick="filterProjects('all')" class="project-filter-btn px-5 py-2.5 rounded-full text-xs font-bold bg-navy-900 text-amber-400 shadow" data-filter="all">Semua Karya</button>
+                <button onclick="filterProjects('social')" class="project-filter-btn px-5 py-2.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200" data-filter="social">Social Media Feeds & Story</button>
+                <button onclick="filterProjects('branding')" class="project-filter-btn px-5 py-2.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200" data-filter="branding">Logo & Visual Identity</button>
+                <button onclick="filterProjects('event')" class="project-filter-btn px-5 py-2.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200" data-filter="event">Event Assets & Print</button>
+                <button onclick="filterProjects('mockup')" class="project-filter-btn px-5 py-2.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200" data-filter="mockup">Product Mockup</button>
+                <button onclick="filterProjects('video')" class="project-filter-btn px-5 py-2.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200" data-filter="video">Video Editing</button>
+            </div>
+
+            <!-- Projects Grid Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                
+                <!-- Project Card 1 -->
+                <div class="project-card bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="social">
+                    <div class="relative h-52 bg-slate-900 flex items-center justify-center p-6 text-white overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-navy-900 via-indigo-950 to-slate-800 opacity-90"></div>
+                        <div class="relative z-10 text-center space-y-2">
+                            <i class="fa-brands fa-instagram text-4xl text-amber-400 group-hover:scale-110 transition-transform"></i>
+                            <h4 class="font-bold text-lg text-white">Instagram Feeds Specialist</h4>
+                            <p class="text-xs text-amber-200 font-mono">@sumpahapotekeruta45 & @senma.fokung</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-[10px] font-bold uppercase mb-2">Social Media</span>
+                            <h3 class="font-bold text-navy-900 text-lg">Manajemen & Grid Instagram Feeds</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Mengelola dan mengembangkan konten Instagram melalui perencanaan visual, desain micro-blog/grid, serta penyusunan feed informatif untuk akun organisasi & event.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+                            <span class="text-[11px] font-semibold text-slate-500">Canva, Photoshop, CapCut</span>
+                            <button onclick="openProjectModal('Instagram Feeds Specialist', 'Mengelola dan mengembangkan konten Instagram melalui perencanaan visual, desain feed, serta penyusunan konten informatif dan menarik. Berpengalaman mengelola beberapa akun organisasi dan event seperti @sumpahapotekeruta45, @sumpahapotekerusb, @senma.fokung, @himafa.ung, dan @ppk.ormawa.himafa.')" class="text-xs font-bold text-amber-600 hover:text-amber-700">Detail Karya <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="social">
+                    <div class="relative h-52 bg-slate-900 flex items-center justify-center p-6 text-white overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900 via-navy-900 to-slate-900 opacity-90"></div>
+                        <div class="relative z-10 text-center space-y-2">
+                            <i class="fa-solid fa-mobile-screen-button text-4xl text-amber-400 group-hover:scale-110 transition-transform"></i>
+                            <h4 class="font-bold text-lg text-white">Instagram Story & Flyers</h4>
+                            <p class="text-xs text-amber-200 font-mono">Hari Besar & Informasi Event</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-[10px] font-bold uppercase mb-2">Social Media</span>
+                            <h3 class="font-bold text-navy-900 text-lg">Merancang Instagram Story & Flyer</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Merancang flyer peringatan hari besar (seperti Eid Al-Adha), pengumuman maba, hingga galang dana kemanusiaan dengan desain yang cepat dipahami.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+                            <span class="text-[11px] font-semibold text-slate-500">Canva, CorelDraw</span>
+                            <button onclick="openProjectModal('Instagram Story & Digital Flyers', 'Merancang konten Instagram Story berupa flyer hari-hari besar, publikasi event, pengumuman, dan informasi kegiatan organisasi dengan visual yang dinamis dan komunikatif.')" class="text-xs font-bold text-amber-600 hover:text-amber-700">Detail Karya <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="event">
+                    <div class="relative h-52 bg-slate-900 flex items-center justify-center p-6 text-white overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900 via-navy-900 to-slate-800 opacity-90"></div>
+                        <div class="relative z-10 text-center space-y-2">
+                            <i class="fa-solid fa-masks-theater text-4xl text-amber-400 group-hover:scale-110 transition-transform"></i>
+                            <h4 class="font-bold text-lg text-white">Night Art 2024 & Event Assets</h4>
+                            <p class="text-xs text-amber-200 font-mono">Mascot, Twibbon, Buku Pedoman</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-navy-100 text-navy-900 text-[10px] font-bold uppercase mb-2">Event Assets</span>
+                            <h3 class="font-bold text-navy-900 text-lg">Identitas & Maskot Event Kampus</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Ilustrasi maskot karakter gajah, frame Twibbon kegiatan, serta penyusunan layout Buku Pedoman Lomba Karya Tulis Ilmiah.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+                            <span class="text-[11px] font-semibold text-slate-500">CorelDraw, Vector Illustration</span>
+                            <button onclick="openProjectModal('Event Creative Assets & Mascot', 'Merancang berbagai aset visual untuk mendukung kebutuhan dan identitas sebuah event, mulai dari maskot kustom, buku panduan, twibbon, hingga frame foto kegiatan secara konsisten.')" class="text-xs font-bold text-amber-600 hover:text-amber-700">Detail Karya <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="event">
+                    <div class="relative h-52 bg-slate-900 flex items-center justify-center p-6 text-white overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-emerald-950 via-navy-900 to-slate-900 opacity-90"></div>
+                        <div class="relative z-10 text-center space-y-2">
+                            <i class="fa-solid fa-map-location-dot text-4xl text-amber-400 group-hover:scale-110 transition-transform"></i>
+                            <h4 class="font-bold text-lg text-white">Kampung Wisata Herbal</h4>
+                            <p class="text-xs text-amber-200 font-mono">Print & Display Design PPK Ormawa</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-navy-100 text-navy-900 text-[10px] font-bold uppercase mb-2">Print & Display</span>
+                            <h3 class="font-bold text-navy-900 text-lg">Baliho, Spanduk & Peta Potensi TOGA</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Mendesain media cetak skala besar seperti Peta Potensi Tanaman Obat Keluarga Kelurahan Hutuo, spanduk Cafe Herbal, dan papan lokasi pembibitan.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+                            <span class="text-[11px] font-semibold text-slate-500">Large Format Design</span>
+                            <button onclick="openProjectModal('Print & Display Design - PPK Ormawa', 'Merancang berbagai media visual untuk kebutuhan cetak dan display seperti baliho, spanduk, banner, backdrop, dan poster dengan keterbacaan tinggi.')" class="text-xs font-bold text-amber-600 hover:text-amber-700">Detail Karya <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="project-card bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="branding">
+                    <div class="relative h-52 bg-slate-900 flex items-center justify-center p-6 text-white overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-purple-900 via-navy-900 to-slate-900 opacity-90"></div>
+                        <div class="relative z-10 text-center space-y-2">
+                            <i class="fa-solid fa-award text-4xl text-amber-400 group-hover:scale-110 transition-transform"></i>
+                            <h4 class="font-bold text-lg text-white">Identity & Branding Design</h4>
+                            <p class="text-xs text-amber-200 font-mono">A24CHNOID, Apothecary Oath, 16NITE</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-900 text-[10px] font-bold uppercase mb-2">Logo & Identity</span>
+                            <h3 class="font-bold text-navy-900 text-lg">Logo Design & Philosophy Sheet</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Merancang logo angkatan Apothecary Oath XLV, logo alternatif A24CHNOID dengan panduan filosofi bentuk, warna, dan tipografi (Font Evogria).
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+                            <span class="text-[11px] font-semibold text-slate-500">Vector Logo, Typography</span>
+                            <button onclick="openProjectModal('Logo & Visual Identity', 'Merancang identitas visual melalui desain logo untuk angkatan, event, hingga produk. Lengkap dengan panduan filosofi, palette warna, dan tipografi khusus.')" class="text-xs font-bold text-amber-600 hover:text-amber-700">Detail Karya <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="project-card bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="mockup">
+                    <div class="relative h-52 bg-slate-900 flex items-center justify-center p-6 text-white overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-slate-900 via-amber-950 to-navy-900 opacity-90"></div>
+                        <div class="relative z-10 text-center space-y-2">
+                            <i class="fa-solid fa-box-open text-4xl text-amber-400 group-hover:scale-110 transition-transform"></i>
+                            <h4 class="font-bold text-lg text-white">Product Mockups & Merchandise</h4>
+                            <p class="text-xs text-amber-200 font-mono">Kemasan, ID Card, Tumbler, T-Shirt</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-[10px] font-bold uppercase mb-2">Product Mockup</span>
+                            <h3 class="font-bold text-navy-900 text-lg">Visualisasi Produk & Apparel</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Visualisasi produk herbal Moringa Drops, kemasan medis, ID Card panitia, gantungan kunci kustom, tumbler hitam, dan totebag kain.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+                            <span class="text-[11px] font-semibold text-slate-500">3D Packaging, PSD Mockup</span>
+                            <button onclick="openProjectModal('Product Mockup Design', 'Merancang dan memvisualisasikan berbagai kebutuhan merchandise dan kemasan produk melalui mockup realistais seperti botol tetes herbal Moringa, ID Card, kaos, hingga totebag.')" class="text-xs font-bold text-amber-600 hover:text-amber-700">Detail Karya <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 7 -->
+                <div class="project-card bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="video">
+                    <div class="relative h-52 bg-slate-900 flex items-center justify-center p-6 text-white overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-950 via-navy-900 to-slate-900 opacity-90"></div>
+                        <div class="relative z-10 text-center space-y-2">
+                            <i class="fa-solid fa-video text-4xl text-amber-400 group-hover:scale-110 transition-transform"></i>
+                            <h4 class="font-bold text-lg text-white">Video Editing & Production</h4>
+                            <p class="text-xs text-amber-200 font-mono">Official Profile & Aftermovie</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-red-100 text-red-800 text-[10px] font-bold uppercase mb-2">Video Production</span>
+                            <h3 class="font-bold text-navy-900 text-lg">Video Profil & Aftermovie Event</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Produksi video menyeluruh: Profile HIMAFA, Profile Jurusan Farmasi UNG, Aftermovie PKKMB FOK UNG 2024, serta Teaser Night Art 2024.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+                            <span class="text-[11px] font-semibold text-slate-500">CapCut, Color Grading, Storyboard</span>
+                            <button onclick="openProjectModal('Video Editing & Production', 'Menangani proses produksi video secara menyeluruh mulai dari pengambilan footage, pembuatan konsep, hingga video editing profil organisasi dan aftermovie event.')" class="text-xs font-bold text-amber-600 hover:text-amber-700">Detail Karya <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-2">Kredensial & Pengakuan</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">Sertifikasi & Prestasi</p>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Cert Card 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-amber-400 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-award text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold text-slate-400">Juni 2023</span>
+                        </div>
+                        <h3 class="font-bold text-navy-900 text-base leading-snug">Program Penguatan Kapasitas Organisasi Kemahasiswaan (PPK ORMAWA)</h3>
+                        <p class="text-xs text-amber-600 font-semibold mt-2">Pendanaan Tingkat Nasional</p>
+                        <p class="text-xs text-slate-500 mt-2">Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi RI</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs text-emerald-600 font-medium">
+                        <i class="fa-solid fa-circle-check mr-2"></i> Sertifikat Terverifikasi
+                    </div>
+                </div>
+
+                <!-- Cert Card 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-amber-400 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-navy-100 text-navy-800 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-microphone text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold text-slate-400">September 2025</span>
+                        </div>
+                        <h3 class="font-bold text-navy-900 text-base leading-snug">International Conference of Health and Sports</h3>
+                        <p class="text-xs text-amber-600 font-semibold mt-2">Oral Presenter</p>
+                        <p class="text-xs text-slate-500 mt-2">Universitas Negeri Gorontalo</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs text-emerald-600 font-medium">
+                        <i class="fa-solid fa-circle-check mr-2"></i> Sertifikat Terverifikasi
+                    </div>
+                </div>
+
+                <!-- Cert Card 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-amber-400 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-flask text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold text-slate-400">September 2023</span>
+                        </div>
+                        <h3 class="font-bold text-navy-900 text-base leading-snug">Kuliah Pakar Nasional: Pengembangan Sediaan Kosmetik</h3>
+                        <p class="text-xs text-amber-600 font-semibold mt-2">Peserta Simposium Nasional</p>
+                        <p class="text-xs text-slate-500 mt-2">Ikatan Apoteker Indonesia (IAI)</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs text-emerald-600 font-medium">
+                        <i class="fa-solid fa-circle-check mr-2"></i> Sertifikat Terverifikasi
+                    </div>
+                </div>
+
+                <!-- Cert Card 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-amber-400 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-navy-100 text-navy-800 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-capsules text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold text-slate-400">Juni 2023</span>
+                        </div>
+                        <h3 class="font-bold text-navy-900 text-base leading-snug">Webinar Kefarmasian Nasional: Pharmacotherapy PEPTIC 3.0</h3>
+                        <p class="text-xs text-amber-600 font-semibold mt-2">Peserta Webinar Nasional</p>
+                        <p class="text-xs text-slate-500 mt-2">Ikatan Apoteker Indonesia (IAI)</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs text-emerald-600 font-medium">
+                        <i class="fa-solid fa-circle-check mr-2"></i> Sertifikat Terverifikasi
+                    </div>
+                </div>
+
+                <!-- Cert Card 5 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-amber-400 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-notes-medical text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold text-slate-400">Juni 2022</span>
+                        </div>
+                        <h3 class="font-bold text-navy-900 text-base leading-snug">Webinar Nasional: Pengembangan Terapi Kanker di Indonesia</h3>
+                        <p class="text-xs text-amber-600 font-semibold mt-2">Peserta Webinar Nasional</p>
+                        <p class="text-xs text-slate-500 mt-2">Ikatan Apoteker Indonesia (IAI)</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs text-emerald-600 font-medium">
+                        <i class="fa-solid fa-circle-check mr-2"></i> Sertifikat Terverifikasi
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- My Skills Section -->
+    <section id="skills" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-2">Keahlian & Perkakas</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">Keahlian Utama (Skills)</p>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Hard Skills Badges -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-navy-900 text-amber-400 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-navy-900">Hard Skills & Tools</h3>
+                            <p class="text-xs text-slate-500">Perangkat lunak dan kemampuan teknis</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-navy-900 font-semibold text-xs shadow-sm hover:border-amber-400 hover:bg-amber-50 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-palette text-amber-600"></i> Graphic Design
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-navy-900 font-semibold text-xs shadow-sm hover:border-amber-400 hover:bg-amber-50 transition-colors flex items-center gap-2">
+                            <i class="fa-brands fa-square-instagram text-amber-600"></i> Social Media Specialist
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-navy-900 font-semibold text-xs shadow-sm hover:border-amber-400 hover:bg-amber-50 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-camera text-amber-600"></i> Photography
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-navy-900 font-semibold text-xs shadow-sm hover:border-amber-400 hover:bg-amber-50 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-video text-amber-600"></i> Videography
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-navy-900 font-semibold text-xs shadow-sm hover:border-amber-400 hover:bg-amber-50 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-kanban text-amber-600"></i> Project Management
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-navy-900 font-semibold text-xs shadow-sm hover:border-amber-400 hover:bg-amber-50 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-pen-nib text-amber-600"></i> Content Creation
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-navy-900 text-amber-300 font-bold text-xs shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-crown text-amber-400"></i> Canva Pro
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-navy-900 text-amber-300 font-bold text-xs shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-scissors text-amber-400"></i> CapCut Editor
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-navy-900 text-amber-300 font-bold text-xs shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-draw-polygon text-amber-400"></i> CorelDraw
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-navy-900 font-semibold text-xs shadow-sm hover:border-amber-400 hover:bg-amber-50 transition-colors flex items-center gap-2">
+                            <i class="fa-regular fa-file-word text-amber-600"></i> Microsoft Word
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills Badges -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500 text-navy-900 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-navy-900">Soft Skills & Etos Kerja</h3>
+                            <p class="text-xs text-slate-500">Karakter interpersonal dan manajemen kerja</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-navy-900 font-semibold text-xs shadow-sm hover:border-navy-900 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-wand-magic-sparkles text-navy-900"></i> Creativity
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-navy-900 font-semibold text-xs shadow-sm hover:border-navy-900 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-comments text-navy-900"></i> Communication
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-navy-900 font-semibold text-xs shadow-sm hover:border-navy-900 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-people-group text-navy-900"></i> Teamwork
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-navy-900 font-semibold text-xs shadow-sm hover:border-navy-900 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-arrows-spin text-navy-900"></i> Adaptability
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-navy-900 font-semibold text-xs shadow-sm hover:border-navy-900 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-puzzle-piece text-navy-900"></i> Problem Solving
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-navy-900 font-semibold text-xs shadow-sm hover:border-navy-900 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-clock text-navy-900"></i> Time Management
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-amber-100 border border-amber-300 text-amber-900 font-bold text-xs shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-hourglass-half text-amber-700"></i> Deadline Oriented
+                        </span>
+                        <span class="px-4 py-2 rounded-xl bg-amber-100 border border-amber-300 text-amber-900 font-bold text-xs shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass text-amber-700"></i> Attention to Detail
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Mari Berkolaborasi Section -->
+    <section id="contact" class="py-20 bg-navy-900 text-white relative overflow-hidden">
+        <!-- Accent light circle -->
+        <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Contact Info -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="inline-block px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-widest mb-3 border border-amber-500/30">
+                            Mari Berkolaborasi
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                            Siap Mewujudkan Ide Visual Anda?
+                        </h2>
+                        <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+                            Terima kasih telah mengeksplorasi portofolio saya. Saya selalu terbuka untuk diskusi proyek desain, kolaborasi kreatif, maupun peluang karir professional.
+                        </p>
+                    </div>
+
+                    <!-- Direct Contact Buttons -->
+                    <div class="space-y-4">
+                        <a href="tel:+6282191223271" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-800/80 border border-slate-700 hover:border-amber-400 transition-all group">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500 text-navy-950 flex items-center justify-center font-bold text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Telepon / Telepon WhatsApp</p>
+                                <p class="text-base font-bold text-white group-hover:text-amber-300 transition-colors">+62 821-9122-3271</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:amarshopper44@gmail.com" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-800/80 border border-slate-700 hover:border-amber-400 transition-all group">
+                            <div class="w-12 h-12 rounded-xl bg-navy-800 text-amber-400 border border-amber-400/30 flex items-center justify-center font-bold text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Alamat Email Direct</p>
+                                <p class="text-base font-bold text-white group-hover:text-amber-300 transition-colors">amarshopper44@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div>
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Kunjungi Profil Digital Saya</p>
+                        <div class="flex items-center gap-3">
+                            <a href="https://www.canva.com" target="_blank" class="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400 hover:bg-amber-500 hover:text-navy-950 transition-all" title="Kreator Canva">
+                                <i class="fa-solid fa-paintbrush text-lg"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400 hover:bg-amber-500 hover:text-navy-950 transition-all" title="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in text-lg"></i>
+                            </a>
+                            <a href="https://instagram.com/senma.fokung" target="_blank" class="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400 hover:bg-amber-500 hover:text-navy-950 transition-all" title="Instagram Feeds">
+                                <i class="fa-brands fa-instagram text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Interactive Contact Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-3xl p-8 text-slate-800 shadow-2xl border border-amber-400/30">
+                        <h3 class="text-xl font-bold text-navy-900 mb-1">Kirim Pesan Langsung</h3>
+                        <p class="text-xs text-slate-500 mb-6">Isi formulir di bawah ini untuk memulai percakapan proyek.</p>
+
+                        <form id="portfolio-contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-navy-900 mb-1.5">Nama Lengkap</label>
+                                    <input type="text" required placeholder="Contoh: Budi Pratama" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-navy-900 mb-1.5">Email Anda</label>
+                                    <input type="email" required placeholder="nama@email.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-navy-900 mb-1.5">Subjek / Jenis Proyek</label>
+                                <input type="text" required placeholder="Desain Logo / Feed Instagram / Layanan Cetak" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-navy-900 mb-1.5">Pesan Detail</label>
+                                <textarea rows="4" required placeholder="Tuliskan ide atau kebutuhan visual Anda di sini..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500 resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl gold-gradient-bg text-navy-950 font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i> Kirim Pesan Sekarang
+                            </button>
+                        </form>
+
+                        <div id="form-success-toast" class="hidden mt-4 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-800 text-xs font-medium flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                            Pesan Anda berhasil terkirim! Amar Ma'ruf akan segera menghubungi Anda.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+            <p>&copy; 2026 Amar Ma'ruf, S.Farm. All Rights Reserved.</p>
+            <p class="text-slate-500">Designed with Navy & Gold Aesthetic • Built with HTML5 & Tailwind CSS</p>
+        </div>
+    </footer>
+
+    <!-- Modal Preview CV / QR Code -->
+    <div id="cv-modal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 text-center shadow-2xl border border-amber-400/40 relative">
+            <button onclick="toggleCvModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="w-12 h-12 rounded-2xl bg-navy-900 text-amber-400 flex items-center justify-center font-bold text-xl mx-auto mb-3">
+                AM
+            </div>
+
+            <h3 class="text-lg font-bold text-navy-900">Scan untuk Melihat CV</h3>
+            <p class="text-xs text-slate-500 mb-4">Curriculum Vitae Amar Ma'ruf, S.Farm</p>
+
+            <!-- QR Code Graphic Placeholder -->
+            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 inline-block mb-4 shadow-inner">
+                <div class="w-48 h-48 bg-white p-2 rounded-xl border flex flex-col items-center justify-center relative">
+                    <!-- Stylized SVG QR Code Representation -->
+                    <svg viewBox="0 0 100 100" class="w-full h-full text-navy-900 fill-current">
+                        <path d="M0,0 h30 v30 h-30 z M5,5 v20 h20 v-20 z M10,10 h10 v10 h-10 z" />
+                        <path d="M70,0 h30 v30 h-30 z M75,5 v20 h20 v-20 z M80,10 h10 v10 h-10 z" />
+                        <path d="M0,70 h30 v30 h-30 z M5,75 v20 h20 v-20 z M10,80 h10 v10 h-10 z" />
+                        <rect x="35" y="5" width="10" height="10" />
+                        <rect x="50" y="15" width="15" height="10" />
+                        <rect x="35" y="35" width="30" height="30" />
+                        <rect x="70" y="45" width="25" height="10" />
+                        <rect x="75" y="75" width="15" height="15" />
+                    </svg>
+                </div>
+            </div>
+
+            <p class="text-[11px] text-slate-500 mb-4">Scan QR code di atas menggunakan kamera smartphone untuk mengunduh CV resmi.</p>
+
+            <button onclick="toggleCvModal()" class="w-full py-2.5 rounded-xl bg-navy-900 text-white font-bold text-xs hover:bg-slate-800">
+                Tutup Jendela
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal Project Details -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl border border-amber-400/40 relative">
+            <button onclick="closeProjectModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-3 rounded-xl bg-amber-500 text-navy-950">
+                    <i class="fa-solid fa-folder-open text-xl"></i>
+                </div>
+                <div>
+                    <h3 id="modal-project-title" class="text-xl font-bold text-navy-900">Detail Projek</h3>
+                    <p class="text-xs text-amber-600 font-semibold">Portofolio Amar Ma'ruf</p>
+                </div>
+            </div>
+
+            <p id="modal-project-desc" class="text-xs text-slate-600 leading-relaxed bg-slate-50 p-4 rounded-2xl border border-slate-200 mb-6">
+                Deskripsi detail projek akan tampil di sini.
+            </p>
+
+            <div class="flex gap-3">
+                <button onclick="closeProjectModal()" class="flex-1 py-3 rounded-xl bg-navy-900 text-white font-bold text-xs hover:bg-slate-800">
+                    Selesai
+                </button>
+                <a href="#contact" onclick="closeProjectModal()" class="flex-1 py-3 rounded-xl gold-gradient-bg text-navy-950 font-bold text-xs text-center">
+                    Diskusi Proyek Ini
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Mobile Drawer Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // CV Modal Toggle Function
+        function toggleCvModal() {
+            const modal = document.getElementById('cv-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        // Project Modal Open / Close
+        function openProjectModal(title, desc) {
+            document.getElementById('modal-project-title').textContent = title;
+            document.getElementById('modal-project-desc').textContent = desc;
+            document.getElementById('project-modal').classList.remove('hidden');
+        }
+
+        function closeProjectModal() {
+            document.getElementById('project-modal').classList.add('hidden');
+        }
+
+        // Portfolio Category Filter Logic
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.project-filter-btn');
+
+            // Update Active Button Styling
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.className = "project-filter-btn px-5 py-2.5 rounded-full text-xs font-bold bg-navy-900 text-amber-400 shadow";
+                } else {
+                    btn.className = "project-filter-btn px-5 py-2.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200";
+                }
+            });
+
+            // Filter Grid Items
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Form Submit Action Simulator (No Alert)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const toast = document.getElementById('form-success-toast');
+            toast.classList.remove('hidden');
+            document.getElementById('portfolio-contact-form').reset();
+
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
+```
